@@ -1084,14 +1084,14 @@ function playTudum() {
         oscillator.connect(gainNode);
         gainNode.connect(ctx.destination);
 
-        oscillator.frequency.setValueAtTime(150, ctx.currentTime);
-        oscillator.frequency.exponentialRampToValueAtTime(80, ctx.currentTime + 0.6);
+        oscillator.frequency.setValueAtTime(100, ctx.currentTime);
+        oscillator.frequency.exponentialRampToValueAtTime(50, ctx.currentTime + 1);
 
-        gainNode.gain.setValueAtTime(0.4, ctx.currentTime);
-        gainNode.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.6);
+        gainNode.gain.setValueAtTime(0.8, ctx.currentTime);
+        gainNode.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 1);
 
         oscillator.start(ctx.currentTime);
-        oscillator.stop(ctx.currentTime + 0.6);
+        oscillator.stop(ctx.currentTime + 1);
     }
 }
 
